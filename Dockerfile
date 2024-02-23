@@ -10,4 +10,4 @@ COPY src/Main.java .
 RUN javac Main.java
 
 # Command to run the Java application with the correct classpath
-CMD ["java","/Main"]
+CMD ["java","Main"]

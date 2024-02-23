@@ -10,4 +10,4 @@ COPY . .
 RUN javac Main.java
 
 # Command to run the Java application with the correct classpath
-CMD ["java", "-classpath", "/app", "com.Spotify.Main"]
+CMD ["java","/Main"]

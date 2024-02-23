@@ -4,10 +4,15 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copy all source files into the container
-COPY . .
+COPY Main.java .
+COPY Playlist.java .
+COPY Songs.java .
 
 # Compile all Java source files
-RUN javac com/Spotify/Songs.java com/Spotify/Playlist.java com/Spotify/Main.java
+RUN javac Songs.java Playlist.java Main.java
+
+# Remove the Java source files
+RUN rm *.java
 
 # Command to run the Java application
-CMD ["java", "-classpath", "/app", "com.Spotify.Main"]
+CMD ["java", "Main"]

@@ -11,9 +11,9 @@ COPY Songs.java .
 
 
 # Command to run the Java application
-
-RUN javac Playlist.java
 RUN javac Songs.java
+RUN javac Playlist.java
+
 RUN javac Main.java
 
 CMD ["java","Main"]

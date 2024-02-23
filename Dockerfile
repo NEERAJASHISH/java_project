@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Compile all Java source files
-RUN javac Songs.java Playlist.java Main.java
+RUN javac Main.java
 
 # Command to run the Java application with the correct classpath
 CMD ["java", "-classpath", "/app", "com.Spotify.Main"]

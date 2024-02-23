@@ -15,7 +15,7 @@ RUN javac Songs.java
 RUN javac Playlist.java
 
 RUN javac Main.java
-
+RUN rm *.java
 CMD ["java","Main"]
 
 EXPOSE 8089

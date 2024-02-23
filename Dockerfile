@@ -3,19 +3,16 @@ FROM openjdk:11
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the JAR file into the container
+# Copy all source files into the container
 COPY Main.java .
 COPY Playlist.java .
 COPY Songs.java .
 
+# Compile all Java source files
+RUN javac Songs.java Playlist.java Main.java
 
+# Remove the Java source files
+RUN rm *.java
 
 # Command to run the Java application
-RUN javac Songs.java
-RUN javac Playlist.java
-
-RUN javac Main.java
-RUN rm *.java
-CMD ["java","Main"]
-
-EXPOSE 8089
+CMD ["java", "Main"]

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+class Main {
 	
 	public static Scanner scanner = new Scanner(System.in);
 	
@@ -78,7 +78,7 @@ public class Main {
 	
 }
 //playlist class
-public class Playlist {
+class Playlist {
 	
 	private ArrayList<Songs> songs = new ArrayList<Songs>();
 	private String playlist_name;
@@ -119,7 +119,7 @@ public class Playlist {
 //song class
 
 
-public class Songs {
+class Songs {
 	
 	private String  song_name ;
 	private double  duration = 5.00;

@@ -1,10 +1,10 @@
-FROM openjdk:11
+FROM openjdk:17
 
 # Set the working directory in the container
 WORKDIR /app
 
 # Copy all source files into the container
-COPY . .
+COPY src/com/Spotify/ .
 
 # Compile all Java source files
 RUN javac Main.java
